@@ -43,32 +43,32 @@ ol {
 .content {
   margin: 0 auto;
   display: flex;
+  align-items: end;
   gap: 30px;
-  inline-size: 100%;
 }
 
 .result {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-self: flex-end;
 }
 
 .result__video-container {
+  position: relative;
   width: 771px;
   height: 386px;
 }
 
 .result__video {
-  
   height: inherit;
-  width: auto;
+  width: inherit;
   object-fit: cover;
 }
 
 .search-form {
   display: flex;
-  gap: 40px;
+  flex-direction: row;
+  gap: 42px;
 }
 
 .search-form__fieldset {
@@ -76,6 +76,7 @@ ol {
   flex-direction: column;
   border: none;
   gap: 5px;
+  width: fit-content;
 }
 
 .search-form__fieldset-title {
@@ -117,7 +118,7 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  width: 229px;
+  width: 224px;
   color: white;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -172,8 +173,9 @@ ol {
   background-color: transparent;
   font-weight: 700;
   font-size: 18px;
-  line-height: 21,6px;
   inline-size: 100%;
+  width: 194px;
+  height: 34px;
 }
 
 .button:active {
@@ -204,6 +206,7 @@ ol {
   font-weight: 700;
   font-size: 75px;
   text-transform: uppercase;
+  line-height: 70.5px;
 }
 
 .content__accent {
@@ -211,6 +214,78 @@ ol {
 }
 
 .content__list {
-  overflow-y: scroll;
-  block-size: 298px;
+  display: flex;
+  position: relative;
+  overflow-y: auto;
+  height: 300px;
+  flex-direction: column;
+  align-self: baseline;
+  gap: 32px;
+}
+
+.cards-list-item-template {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: white;
+  margin: 2px;
+}
+
+.content__list-item:focus-visible {
+  position: relative;
+  outline: 1px solid white;
+  outline-offset: inherit ;
+}
+
+.content__list-item:active {
+  background: #545050;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__video-card {
+  display: flex;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  gap: 6px;
+  margin-right: 13px;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  width: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  margin-left: auto;
+  object-fit: cover;
+}
+
+.more-button {
+  width: 100%;
 }
