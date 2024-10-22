@@ -231,11 +231,18 @@ ol {
   height: 300px;
   flex-direction: column;
   align-self: baseline;
-  gap: 30px;
 }
 
-.cards-list-item-template {
-  display: flex;
+.content__list-item {
+  margin-bottom: 30px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0;
 }
 
 .content__card-link {
@@ -250,10 +257,6 @@ ol {
 }
 
 .content__card-link:active {
-  background: #545050;
-}
-
-.content__card-link_current {
   background: #545050;
 }
 
@@ -276,9 +279,13 @@ ol {
 .content__video-card-title {
   font-family: Oswald, sans-serif;
   font-size: 30px;
-  width: 700;
+  width: 700px;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 192px; 
 }
 
 .content__video-card-description {
