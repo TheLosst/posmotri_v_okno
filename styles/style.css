@@ -82,6 +82,7 @@ ol {
   display: flex;
   gap: 5px;
   flex-direction: row;
+  align-items: center;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -92,8 +93,10 @@ ol {
   outline: none;
 }
 
+.search-form__pseudo-checkbox, .search-form__pseudo-checkbox:hover+.search-form__label-text,
 .search-form__label-text:hover {
- text-decoration: underline;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 
@@ -147,7 +150,9 @@ ol {
   justify-content: center;
 }
 
-.search-form__checkbox:checked+.search-form__pseudo-checkbox::after {
+
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   display: block;
   width: 15px;
@@ -161,15 +166,16 @@ ol {
 }
 
 .button {
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #FFF;
+  padding: 6px 0;
+  color: #FFF;
   font-family: 'Fira Sans Condensed', sans-serif;
-  background-color: transparent;
   font-weight: 700;
   font-size: 18px;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
   inline-size: 100%;
-  width: 194px;
-  height: 34px;
 }
 
 .button:active {
@@ -180,14 +186,16 @@ ol {
   text-decoration: underline;
 }
 
-.button:focus-visible {
+/* .button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 4px;
+  border-color: white;
+} */
+
+.button:focus {
   outline: 1px solid white;
   outline-offset: 2px;
   border-color: white;
-}
-
-.button:focus {
-  outline: none;
 }
 
 .search-form__submit-button {
@@ -304,6 +312,11 @@ ol {
   background: #545050;
 }
 
+.more-button {
+  margin-bottom: 3px;
+  margin-left: 3px;
+  width: 98%;
+}
 
 
 
