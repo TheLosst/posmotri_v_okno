@@ -83,6 +83,8 @@ ol {
   gap: 5px;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
+  
 }
 
 .search-form__label:has(:focus-visible) {
@@ -93,10 +95,11 @@ ol {
   outline: none;
 }
 
-.search-form__pseudo-checkbox, .search-form__pseudo-checkbox:hover+.search-form__label-text,
-.search-form__label-text:hover {
+.search-form__pseudo-checkbox,
+.search-form__pseudo-checkbox:hover+.search-form__label-text,
+.search-form__label-text:hover,
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
-  cursor: pointer;
 }
 
 
@@ -299,10 +302,6 @@ ol {
   margin-left: auto;
   object-fit: cover;
   
-}
-
-.more-button {
-  width: 100%;
 }
 
 ::placeholder {
